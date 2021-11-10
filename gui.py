@@ -91,7 +91,7 @@ class Gui(QMainWindow):
 
         if color.isValid():
             print(str.encode(color.name().replace("#", "0x")))
-            conn = Connection('/dev/tty.usbmodem14101', 115200)
+            conn = Connection(self.selected_device, 115200)
             conn.send_command(LightCommands().set_color(str.encode(color.name().replace("#", "0x"))))
 
 if __name__ == '__main__':
