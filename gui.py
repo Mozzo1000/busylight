@@ -72,15 +72,15 @@ class Gui(QMainWindow):
 
     def click_away(self):
         conn = Connection(self.selected_device, 115200)
-        conn.send_command(LightCommands().set_color(b'0xeff542'))
+        conn.send_command(LightCommands().set_color(b'0xfffa00'))
 
     def click_busy(self):
         conn = Connection(self.selected_device, 115200)
-        conn.send_command(LightCommands().set_color(b'0xeb343a'))
+        conn.send_command(LightCommands().set_color(b'0xff0200'))
     
     def click_available(self):
         conn = Connection(self.selected_device, 115200)
-        conn.send_command(LightCommands().set_color(b'0x3cfa68'))
+        conn.send_command(LightCommands().set_color(b'0x0bff07'))
 
     def open_settings(self):
         settings = SettingsWindow(self)
